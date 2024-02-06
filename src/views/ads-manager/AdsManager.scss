@@ -1,0 +1,348 @@
+@import "~@blueprintjs/core/lib/css/blueprint.css";
+@import "~@blueprintjs/icons/lib/css/blueprint-icons.css";
+@import "~@blueprintjs/datetime/lib/css/blueprint-datetime.css";
+
+$mobile-width: 480px;
+$tablet-width: 768px;
+// $desktop-width: 1024px;
+
+@mixin mobile {
+    @media (max-width: #{$mobile-width - 1px}) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media (max-width: #{$tablet-width - 1px}) {
+        @content;
+    }
+}
+
+body {
+    overflow-x: hidden !important;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+// AMPage.js
+.am_page_container {
+    // color: red;
+}
+
+.input_controls_search__text:focus {
+    outline: none !important;
+    box-shadow: none !important;
+    border: 1px solid #ced4da;
+}
+
+.input_controls_search__btn_clear:focus {
+    outline: none !important;
+    box-shadow: none !important;
+	border: 1px solid #ced4da;
+}
+
+// Search
+.input_controls_search {
+	display: flex;
+	align-items: center;
+	justify-content: first baseline;
+	//margin-top: 15px;
+
+	@include mobile {
+		margin-top: 5px;
+	}
+
+	.input_controls_search__text {
+		border-right: unset;
+	}
+
+	.input_controls_search__btn_clear {
+		background-color: unset;
+		color: #000;
+		border: 1px solid #ced4da;
+		border-left: unset;
+	}
+}
+
+.update-text {
+    display: inline-block;
+    margin-right: 10px;  /* adjust as needed */
+    vertical-align: middle;  /* aligns the text with the middle of the adjacent elements */
+}
+
+.right_buttons {
+	display: flex;
+	align-items: center;
+    justify-content: flex-end;
+
+	.p-multiselect {
+		height: 35px;
+		width: 180px;
+		background-color: #748892;
+		color: #fff;
+		//margin-left: 10px;
+		
+	}
+
+	.p-multiselect-trigger {
+		color: #fff;
+	}
+	.p-multiselect-trigger-icon {
+		color: #fff;
+	}
+
+	.p-multiselect .p-multiselect-trigger {
+		width: auto !important;
+		padding-right: 10px;
+	}
+
+	.p-multiselect-label {
+		//padding-top: 7px;
+		font-size: 14px;
+	}
+
+	.p-multiselect-label-container {
+		overflow: hidden;
+		display: flex;
+		justify-content: center; /* Centers content horizontally */
+		align-items: center; /* Centers content vertically */
+		cursor: pointer;
+	}
+
+	.p-placeholder {
+		color: #fff !important;
+	}
+
+	// 
+	.p-calendar {
+		height: 45px;
+	}
+
+	.p-inputtext {
+		text-align: center;
+	}
+
+
+	.group_platforms_view_by {
+		display: flex;
+		align-items: center;
+
+		.chk_group_platforms {
+			margin-left: 0px;
+		}
+
+		@include mobile {
+			margin-top: 5px;
+		}
+	}
+
+	@include mobile {
+		flex-direction: column;
+		margin-top: 65px;
+	}
+}
+
+
+
+// InputControls.js
+.input_controls_container_ads_manager {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    margin-right: 20px;
+
+    .left_buttons {
+        display: flex;
+        max-height: 42px;
+
+        @include mobile {
+            margin-left: 0px;
+            margin-right: 0px;
+            flex-direction: column;
+        }
+
+        .left_buttons_control {
+            display: flex;
+            align-items: center;
+
+            .btn {
+                margin-bottom: unset;
+            }
+
+            .new_button {
+                display: inline;
+                white-space: nowrap;
+            }
+
+            input:focus {
+                outline: none !important;
+            }
+        }
+
+        // Search
+        .input_controls_search {
+            display: flex;
+            align-items: center;
+            justify-content: first baseline;
+            margin-top: 15px;
+
+            @include mobile {
+                margin-top: 5px;
+            }
+
+            .input_controls_search__text {
+                border-right: unset;
+            }
+
+            .input_controls_search__btn_clear {
+                background-color: unset;
+                color: #000;
+                border: 1px solid #ced4da;
+                border-left: unset;
+            }
+        }
+
+    }
+
+	
+    .right_buttons {
+        display: flex;
+        align-items: center;
+
+        .p-multiselect {
+            height: 35px;
+			width: 180px;
+            background-color: #748892;
+            color: #fff;
+            //margin-left: 10px;
+			
+        }
+
+        .p-multiselect-trigger {
+            color: #fff;
+        }
+
+		.p-multiselect .p-multiselect-trigger {
+			width: auto !important;
+			padding-right: 10px
+		}
+
+        .p-multiselect-label {
+            padding-top: 7px;
+            font-size: 14px;
+        }
+
+		.p-multiselect-label-container {
+			overflow: hidden;
+			/* flex: 1 1 auto; */
+			cursor: pointer;
+		}
+
+        .p-placeholder {
+            color: #fff !important;
+        }
+
+        // 
+        .p-calendar {
+            height: 45px;
+        }
+
+        .p-inputtext {
+            text-align: center;
+        }
+
+        .date_filter {}
+
+        .group_platforms_view_by {
+            display: flex;
+            align-items: center;
+
+            .chk_group_platforms {
+                margin-left: 0px;
+            }
+
+            @include mobile {
+                margin-top: 5px;
+            }
+        }
+
+        @include mobile {
+            flex-direction: column;
+            margin-top: 65px;
+        }
+    }
+
+    @include mobile {
+        flex-direction: column;
+    }
+}
+
+// ==========
+div.p-multiselect-items-wrapper {
+    max-height: unset !important;
+}
+
+div.p-dropdown-items-wrapper {
+    max-height: unset !important;
+}
+
+.p-datatable .p-datatable-footer {
+    font-weight: unset !important;
+}
+
+// ==============
+
+// TabsMain.js
+.tab_item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.tab-content {
+    padding: 0px;
+}
+
+// Validate
+.me_input_invalidate {
+    border: 1px solid red;
+}
+
+// DateRangeInput
+.bp4-input-group {
+    width: 100px;
+}
+
+// 
+.headerChildren {
+    font-size: 14px;
+}
+
+.headerChildren th {
+    display: none !important;
+    font-size: 14px;
+}
+
+// .p-datatable .p-datatable-tbody > tr > td{
+//     padding-right: 0 !important;
+// }
+
+.p-datatable-scrollable .p-datatable-wrapper {
+    position: unset !important;
+}
+
+// 
+.isEndStartCompare_error, .isBudgetCompare_error, .isAgeCompare_error{
+    border: 1px solid red;
+    border-radius: 5px;
+}
+.bp4-html-select select{
+    padding: unset !important;
+}
+// 
+.badge_font_size{
+    font-size: 65%;
+}

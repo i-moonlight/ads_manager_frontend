@@ -1,0 +1,72 @@
+[
+    {
+        "id": 1,
+        "text": "Child Node",
+        "expanded": true,
+        "children": [
+            {
+                "id": 1,
+                "text": "user.php",
+                "isLeaf": true
+            },
+            {
+                "id": 2,
+                "text": "invoice.pdf",
+                "isLeaf": true
+            },
+            {
+                "id": 3,
+                "text": "data.text",
+                "isLeaf": true
+            },
+            {
+                "id": 4,
+                "text": "script.js",
+                "isLeaf": true
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "text": "Child Node",
+        "expanded": true,
+        "children": [
+            {
+                "id": 1,
+                "text": "logo.png",
+                "isLeaf": true
+            },
+            {
+                "id": 2,
+                "text": "Sub Node",
+                "children": [
+                    {
+                        "id": 1,
+                        "text": "logo.png",
+                        "isLeaf": true
+                    },
+                    {
+                        "id": 2,
+                        "text": "favicon.ico",
+                        "isLeaf": true
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": 3,
+        "text": "index.html",
+        "isLeaf": true
+    },
+    {
+        "id": 4,
+        "text": "package.json",
+        "isLeaf": true
+    },
+    {
+        "id": 5,
+        "text": "root.zip",
+        "isLeaf": true
+    }
+]

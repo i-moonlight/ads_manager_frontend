@@ -1,0 +1,165 @@
+.react-tags {
+    position: relative;
+    padding: 0px 0 0 5px;
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+    /* shared font styles */
+    font-size: 1em;
+    line-height: 1.2;
+	min-height:38px;
+    justify-items: center;
+    /* clicking anywhere will focus the input */
+    cursor: text;
+    //&.is-focused {
+    //   border-color: #0703f3;
+    //}
+}
+
+.react-tags {
+    border: 1px solid #ced4da;
+	background-color: #f4f7fa;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.react-tags:focus-within {
+    border-color: #80bdff;
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+.react-tags__selected {
+    display: inline;
+}
+		
+.react-tags__selected-tag {
+    display: inline-block;
+    box-sizing: border-box;
+    //margin: 0 6px 6px 0;
+    //padding: 6px 8px;
+    border: 0px solid #d1d1d1;
+    //border-radius: 2px;
+	margin: 5px 10px 5px 0;
+	padding: 5px 12px;
+	background-color: $default-color;
+	border-radius: 4px;
+    /* match the font styles */
+    font-size: inherit;
+    line-height: inherit;
+    &:after {
+        content: '\2715';
+        color: #888;
+        margin-left: 8px;
+    }
+    &:hover,
+    &:focus {
+        border-color: #b1b1b1;
+    }
+}
+
+.react-tags__search {
+    display: inline-block;
+    /* match tag layout */
+    padding: 0px 2px;
+    margin-bottom: 6px;
+    color: #495057;
+    /* prevent autoresize overflowing the container */
+    max-width: 100%;
+    input {
+        /* prevent autoresize overflowing the container */
+        max-width: 100%;
+        /* remove styles and layout from this element */
+        margin: 0;
+        padding: 0;
+        border: 0;
+        outline: none;
+        /* match the font styles */
+        font-size: inherit;
+        line-height: inherit;
+        &::-ms-clear {
+            display: none;
+        }
+    }
+}
+
+.react-tags__search-input::placeholder {
+    color: #aaaeb3;
+}
+
+
+@media screen and (min-width: 30em) {
+    .react-tags__search {
+        /* this will become the offsetParent for suggestions */
+        position: relative;
+    }
+}
+
+.react-tags__suggestions {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    ul {
+        margin: 4px -1px;
+        padding: 0;
+        list-style: none;
+        background: white;
+        border: 1px solid #ced4da;
+        border-radius: 2px;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    }
+    li {
+        border-bottom: 1px solid #ddd;
+        padding: 6px 8px;
+        mark {
+            text-decoration: underline;
+            background: none;
+            font-weight: 600;
+        }
+        &:hover {
+            cursor: pointer;
+            background: #eee;
+        }
+        &.is-active {
+            background: #b7cfe0;
+        }
+        &.is-disabled {
+            opacity: 0.5;
+            cursor: auto;
+        }
+    }
+}
+
+@media screen and (min-width: 30em) {
+    .react-tags__suggestions {
+        width: 240px;
+    }
+}
+
+/* custom scss */
+.react-tags {
+    .react-tags__selected-tagx {
+        margin: 5px 10px 5px 0;
+        padding: 5px 12px;
+		background-color: $default-color;
+		border-radius: 4px; /* Adjust this value to change the roundness of the corners */
+    
+        &:after {
+            //color: inherit;
+        }
+    }
+    .react-tags__search {
+        margin: 0;
+        input {
+            width: 100% !important;
+            background: transparent !important;
+            border: none;
+            padding: 10px 0px;
+        }
+    }
+    input {
+        width: 100% !important;
+        background: transparent !important;
+        border: none;
+        padding: 8px 0px;
+    }
+}

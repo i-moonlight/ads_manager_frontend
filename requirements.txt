@@ -1,0 +1,1 @@
+yarn add gapi-script react-google-login jwt-decode js-cookie react-facebook-login react-linkedin-login-oauth2 qs randomstring crypto base64url primereact primeicons react-masonry-css

@@ -1,0 +1,39 @@
+
+$mobile-width: 480px;
+$tablet-width: 768px;
+// $desktop-width: 1024px;
+
+@mixin mobile {
+    @media (max-width: #{$mobile-width - 1px}) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media (max-width: #{$tablet-width - 1px}) {
+        @content;
+    }
+}
+
+// Search
+.input_controls_search {
+    display: flex;
+    align-items: center;
+    justify-content: first baseline;
+    // margin-top: 15px;
+    
+    @include mobile {
+        // margin-top: 5px;
+    }
+
+    .input_controls_search__text {
+        border-right: unset;
+    }
+
+    .input_controls_search__btn_clear {
+        background-color: unset;
+        color: #000;
+        border: 1px solid #ced4da;
+        border-left: unset;
+    }
+}
